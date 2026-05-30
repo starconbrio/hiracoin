@@ -77,7 +77,7 @@ public:
         consensus.QIP6Height = 1284400;
         consensus.QIP7Height = 1284400;
         consensus.QIP9Height = 1284400;
-        consensus.powLimit = uint256S("0000ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff");
+        consensus.powLimit = uint256S("7fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff");
         consensus.posLimit = uint256S("00000000ffffffffffffffffffffffffffffffffffffffffffffffffffffffff");
         consensus.QIP9PosLimit = uint256S("0000000000001fffffffffffffffffffffffffffffffffffffffffffffffffff"); // The new POS-limit activated after QIP9
         consensus.nPosTargetTimespan = 60;
@@ -98,10 +98,10 @@ public:
         consensus.vDeployments[Consensus::DEPLOYMENT_TESTDUMMY].nTimeout = 1230767999; // December 31, 2008
 
         // The best chain should have at least this much work.
-        consensus.nMinimumChainWork = uint256S("0x00000000000000000000000000000000000000000008be020ba1b67100fd42b5");
+        consensus.nMinimumChainWork = uint256S("0x00");
 
         // By default assume that the signatures in ancestors of this block are valid.
-        consensus.defaultAssumeValid = uint256S("0x000000000019cc24a160aadde531daf265a05409ddcde3fd91233fd2bd0343d4");
+        consensus.defaultAssumeValid = uint256S("0x00");
 
         /**
          * The message start string is designed to be unlikely to occur in normal data.
@@ -117,7 +117,7 @@ public:
         m_assumed_blockchain_size = 2;
         m_assumed_chain_state_size = 1;
 
-        genesis = CreateGenesisBlock(1778400000, 0, 0x1f00ffff, 1, 1 * COIN);
+        genesis = CreateGenesisBlock(1778400000, 0, 0x207fffff, 1, 1 * COIN);
         consensus.hashGenesisBlock = genesis.GetHash();
         assert(genesis.hashMerkleRoot == uint256S("0xe88f839697aefb580c2bd5a53b8d36f70b3826014e16c9a9558f27b8500ee869"));
 
@@ -183,7 +183,7 @@ public:
         consensus.QIP6Height = std::numeric_limits<int>::max();
         consensus.QIP7Height = std::numeric_limits<int>::max();
         consensus.QIP9Height = std::numeric_limits<int>::max();
-        consensus.powLimit = uint256S("0000ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff");
+        consensus.powLimit = uint256S("7fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff");
         consensus.posLimit = uint256S("00000000ffffffffffffffffffffffffffffffffffffffffffffffffffffffff");
         consensus.QIP9PosLimit = uint256S("0000000000001fffffffffffffffffffffffffffffffffffffffffffffffffff"); // The new POS-limit activated after QIP9
         consensus.nPosTargetTimespan = 60;
@@ -218,7 +218,7 @@ public:
         m_assumed_blockchain_size = 1;
         m_assumed_chain_state_size = 1;
 
-        genesis = CreateGenesisBlock(1778400100, 0, 0x1f00ffff, 1, 1 * COIN);
+        genesis = CreateGenesisBlock(1778400100, 0, 0x207fffff, 1, 1 * COIN);
         consensus.hashGenesisBlock = genesis.GetHash();
         assert(genesis.hashMerkleRoot == uint256S("0xe88f839697aefb580c2bd5a53b8d36f70b3826014e16c9a9558f27b8500ee869"));
 
